@@ -1,8 +1,8 @@
-int piezo = 3;          // 3번핀 사용
+int piezo = 3;         
 
 void setup()            
 {                
-  pinMode(piezo, OUTPUT);     // 피에조 부저 제어를 위한 3번 디지털 핀 사용
+  pinMode(piezo, OUTPUT);    
 }
 
 void loop() 
