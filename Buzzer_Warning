@@ -1,0 +1,16 @@
+int piezo = 3;          // 3번핀 사용
+
+void setup()            
+{                
+  pinMode(piezo, OUTPUT);     // 피에조 부저 제어를 위한 3번 디지털 핀 사용
+}
+
+void loop() 
+{
+  analogWrite(piezo, 64);           // PWM 25% 적용
+  delay(1000);                       // 1초 대기
+  analogWrite(piezo, 128);          // PWM 50% 적용
+  delay(1000);                       // 1초 대기
+  analogWrite(piezo, 256);           // PWM 100% 적용
+  delay(1000);                       // 1초 대기
+}
