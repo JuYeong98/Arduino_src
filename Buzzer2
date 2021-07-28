@@ -1,0 +1,27 @@
+#define A 262 //도
+#define B 294 //레
+#define C 330 //미
+#define D 349 //파
+#define E 392 //솔
+#define F 440 //라
+#define G 494 //시
+
+int piezo = 13; 
+int notes[] = {E,E,F,F,E,E,C,E,E,C,C,B,E,E,F,F,E,E,C,E,C,B,C,A};
+
+void setup() {
+  pinMode(piezo,OUTPUT); 
+}
+void loop(){
+  for(int i=0;i<12;i++){
+    tone(piezo,notes[i],200);   //배열의 0부터 11까지 0.2초씩 소리출력
+    delay(300);   
+  }
+  delay(100);
+
+  for(int i=12;i<24;i++){
+    tone(piezo,notes[i],200);    //배열의 12부터 23까지 0.2초씩 소리출력
+    delay(300);   
+  }
+  delay(1000);   
+}
