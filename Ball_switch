@@ -1,0 +1,26 @@
+//Control led with ball switch
+int led_1 = 3;
+int led_2 = 2;
+int ball_1 = 6;
+int ball_2 = 5;
+
+void setup() {
+  pinMode(led_1,OUTPUT);
+  pinMode(led_2,OUTPUT);
+  pinMode(ball_1,INPUT_PULLUP);
+  pinMode(ball_2,INPUT_PULLUP);
+}
+void loop() {
+  if(digitalRead(ball_1)==LOW){
+    digitalWrite(led_1,HIGH);
+  }
+  else{
+    digitalWrite(led_1,LOW);
+  }
+  if(digitalRead(ball_2)==LOW){
+    digitalWrite(led_2,HIGH);
+  }
+  else{
+    digitalWrite(led_2,LOW);
+  }
+}
