@@ -1,0 +1,24 @@
+//Led control with sound sensor
+int SOUND_SENSOR = A0;
+int led = 7;
+int threshold = 25; //감도조절
+int Sensor_value; 
+ 
+void setup() {                
+  Serial.begin(9600); 
+  pinMode(SOUND_SENSOR, INPUT);
+  pinMode(led, OUTPUT);     
+}
+ 
+void loop() {  
+  Sensor_value = analogRead(A0);   
+  Serial.println(Sensor_value);   
+  delay(10);
+  
+  if(Sensor_value >= threshold){
+    digitalWrite(led, HIGH);
+  }  
+  else{
+    digitalWrite(led, LOW);
+  }
+}
