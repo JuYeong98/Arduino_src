@@ -1,0 +1,18 @@
+int photocellPin = 2;   
+int ledPin = 13;           
+int value = 0;                 
+
+
+void setup() { 
+  pinMode(ledPin, OUTPUT);      
+} 
+
+void loop() { 
+  value = analogRead(photocellPin);    
+  if(value<=512){                                 //512는 전압으로 약 2.5V에 해당
+    digitalWrite(ledPin, HIGH);          //val 512(2.5V) 이하이면 LED가 점등
+  }
+  else{
+    digitalWrite(ledPin, LOW);
+  }
+}
