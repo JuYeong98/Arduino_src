@@ -1,0 +1,22 @@
+#include <Servo.h> 
+
+int servoPin = 9; 
+Servo servo; 
+int angle = 0;
+
+void setup() { 
+    servo.attach(servoPin);  //서보의 현재 각도 저장
+} 
+
+void loop() { 
+  for(angle = 0; angle < 180; angle++) 
+  {
+    servo.write(angle); 
+    delay(15); 
+  } 
+  for(angle = 180; angle > 0; angle--) 
+  { 
+    servo.write(angle); 
+    delay(15); 
+  } 
+} 
